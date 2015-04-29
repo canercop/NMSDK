@@ -2,12 +2,11 @@
 
 ![NMSDK logo](http://netbookmobile.com/NM_Logo.png)
 
-**NM SDK**, is the native ios video player for presents advertisements according to roll types . It supports preroll,midroll and postroll. It has ability to show custom html objects over video player and triggger  **flashlight**, **vibration** and **camera** for improve your Advertisement strenght. Videoplayer also supports [Vast](http://en.wikipedia.org/wiki/Video_Ad_Serving_Template) standards for showing advertisements. 
-
+**NM SDK**, is the native ios video player for presents advertisements according to roll types . It supports preroll,midroll and postroll. It has ability to show custom html objects over video player and trigger  **flashlight**, **vibration** and **camera** for improve your Advertisement strength. Video player also supports [Vast](http://en.wikipedia.org/wiki/Video_Ad_Serving_Template) standards for showing advertisements. 
 
 ## INSTALLATION
 
-**NMSDK** is the framework library that you just need drag and drop in to your project and NM.bundle instead of display custom videoplayer assets properly.  
+**NMSDK** is the framework library that you just need drag and drop in to your project and NM.bundle instead of display custom Video Player assets properly.  
 
 ![Drag and Drop Framework](http://netbookmobile.com/img_02.png )
 
