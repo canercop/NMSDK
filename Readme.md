@@ -33,18 +33,21 @@
 ### Calling Player Class in to your ViewController
 import VasPlayer.h file in to your current ViewController which you will  going to call VideoPlayer.
 
+```objective-c
 	#import <NM/Vasplayer.h>
+```
 	
 ### Keep reference VasPlayer class as nonatomic object in to your current ViewController header file. In given example below, we keeping as videoPlayerViewController.
-
+```objective-c
 	@property (nonatomic) VasPlayer *videoPlayerViewController;
-	
+```
 ### In your implementation file, you need to set delegate VasPlayer like
-
+```objective-c
 	@interface ViewController ()<VasPlayerDelegate>
+```
 	
 ### For initialise VasPlayer, create Dictionary as given example below
-```
+```objective-c
 	NSDictionary * reQuestDictionary = @{
 	@“publisherID":@"247”,
 	@"mainURL":@"http://www.otodunya.com/uploads/video/Shell_5_SD.mp4”,
@@ -59,14 +62,14 @@ import VasPlayer.h file in to your current ViewController which you will  going 
 ```
 
 ### After creating Dictionary , You need to add videoPlayerViewController in to current UIView container as childViewContainer and set it delegate as self.
-```
+```objective-c
 	[self setVideoPlayerViewController:[[VasPlayer alloc] initWithInfo:reQuestDictionary]];
     [self.videoPlayerViewController setDelegate:self];
     [self containerAddChildViewController:self.videoPlayerViewController]; 
 ```    
 
 ### containerAddChildViewController method will be responsible to add VasPlaye add as childView.
-```
+```objective-c
 	//Adding SDK MPMovieController view as childViewController
 	- (void)containerAddChildViewController:(UIViewController *)childViewController {
     [self.videoView setNeedsDisplay];
@@ -81,8 +84,7 @@ import VasPlayer.h file in to your current ViewController which you will  going 
                                                    }
 ```                                                   
 ### @required VasPlayer delegation method will be pushing MPMoviePlayerController’s statement. 
-```
-
+```objective-c
 	//Video Player Statements can be follow from that method.
 	- (void) vasPlayerPlayerStateChanged:(VasPlayer *)vasPlayer :(int)playbackState
     	NSLog(@"Movie Player State = %d",playbackState);
@@ -93,7 +95,7 @@ import VasPlayer.h file in to your current ViewController which you will  going 
     }
 ```    
 ### @required If user tap on Fullsreen when video is playing, you need to destroy childViewController with delegation medhod.
-```
+```objective-c
 	-(void)userExitFromFullScreen:(VasPlayer *)vasPlayer
 	{
     //remove current Videoplayer object from current UIViewController
@@ -103,7 +105,8 @@ import VasPlayer.h file in to your current ViewController which you will  going 
     }  
 ```        
 ### Seek method, sending NSTimeInterval for MediaPlayer for seeking movie for given time.
-```
+```objective-c
+
 	//Seek Method Should be greater than 0
 	- (void) seek :(NSTimeInterval)value 
 	{
@@ -111,14 +114,14 @@ import VasPlayer.h file in to your current ViewController which you will  going 
    }
 ```  
 ### Video Orientation delegation , you will let VasPlayer which orientation has supporting. Standard delegation method is given in example below.
-```
+```objective-c
 	//Video Orientation Delegate
 	- (UIInterfaceOrientationMask)vasPlayerSupportedInterfaceOrientations:(VasPlayer *)player {
     return (UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight);
     }
 ```    
 ### You can also fetch targeting data as NSDictionary
-```
+```objective-c
 	-(NSDictionary *)getTargetting
 	{
 	VasPlayer *vas = [[VasPlayer alloc] init];
