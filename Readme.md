@@ -63,8 +63,8 @@ import VasPlayer.h file in to your current ViewController which you will  going 
 	[self setVideoPlayerViewController:[[VasPlayer alloc] initWithInfo:reQuestDictionary]];
     [self.videoPlayerViewController setDelegate:self];
     [self containerAddChildViewController:self.videoPlayerViewController]; 
-    ```
-    
+```    
+
 ### containerAddChildViewController method will be responsible to add VasPlaye add as childView.
 ```
 	//Adding SDK MPMovieController view as childViewController
